@@ -1,0 +1,338 @@
+:root {
+    --fond-principal: #2C1A3D;           /* violet nuit profond */
+    --violet-degrade: #3B2460;           /* violet un peu plus clair pour le dégradé */
+    --bois: #8B5E3C;                     /* brun bois */
+    --doré: #FFD700;                     /* doré luxe */
+    --texte: #F5F0E1;                    /* ivoire clair pour contraste */
+    --terre: #D9A066;
+}
+
+/* Body tout violet */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--fond-principal), var(--violet-degrade));
+    color: var(--texte);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.2); /* contraste */
+    border-bottom: 1px solid rgba(255,215,0,0.3);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+header #deconnexion {
+    font-size: 1em;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #e74c3c;  /* rouge vif */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+header #deconnexion:hover {
+    background-color: #c0392b; /* rouge plus foncé */
+    transform: scale(1.05);
+}
+
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--doré);
+    font-family: 'Georgia', serif;
+}
+
+header div {
+    font-size: 1em;
+    margin: 3px 0;
+    color: var(--texte);
+}
+
+header hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255,215,0,0.3);
+    margin-top: 15px;
+}
+
+/* Titre page */
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--doré);
+    font-family: 'Georgia', serif;
+}
+
+/* Formulaire */
+form {
+    max-width: 750px;
+    margin: 0 auto 60px auto;
+    background: rgba(255,255,255,0.05); /* très léger pour voir le formulaire, sinon violet complet */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,215,0,0.2);
+}
+
+/* Fieldset */
+fieldset {
+    border: 1px solid rgba(255,215,0,0.3);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: rgba(0,0,0,0.1); /* foncé pour rester dans le violet */
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--doré);
+    font-family: 'Georgia', serif;
+}
+
+/* Labels et Inputs */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--texte);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--doré);
+    background: rgba(255,255,255,0.1); /* très léger, sinon violet complet */
+    color: var(--texte);
+    font-size: 1em;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--terre);
+    font-style: italic;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Boutons */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #FFF;
+    background: linear-gradient(135deg, var(--violet-degrade), var(--fond-principal));
+}
+
+.buttons button:hover {
+    background: var(--doré);
+    color: var(--fond-principal);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Input focus */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(255,215,0,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+
+/* === head page === */
+:root {
+    --violet-fonce: #2E1A47;
+    --violet-clair: #7B5FBF;
+    --doré: #FFD700;
+    --blanc: #F5F5F5;
+    --ivoire: #EDEDED;
+    --gris-fonce: #333333;
+}
+
+/* === Body === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--violet-fonce), var(--violet-clair));
+    color: var(--blanc);
+    min-height: 100vh;
+}
+
+/* === Header === */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--doré);
+}
+
+header div {
+    font-size: 1em;
+    margin: 3px 0;
+    color: var(--ivoire);
+}
+
+header hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin-top: 15px;
+}
+
+/* === Titre page === */
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--doré);
+}
+
+/* === Formulaire === */
+form {
+    max-width: 750px;
+    margin: 0 auto 60px auto;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* === Fieldset === */
+fieldset {
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: rgba(255,255,255,0.05);
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--doré);
+}
+
+/* === Labels et Inputs === */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--blanc);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: var(--gris-fonce);
+    font-size: 1em;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--ivoire);
+    font-style: italic;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* === Boutons === */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--blanc);
+    background: var(--violet-clair);
+}
+
+.buttons button:hover {
+    background: var(--doré);
+    color: var(--violet-fonce);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.btn-enregistrer { background: #6A0DAD; }
+.btn-accueil { background: #7B68EE; }
+.btn-etablir { background: #8A2BE2; }
+
+/* === Input focus === */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+}
